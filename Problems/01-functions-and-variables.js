@@ -34,7 +34,12 @@ function hello () {
   // if you want you can declare a string variable first
   // or in this case you can just return the string directly
   // with something like "return 'Hello!'"
+  return 'Hello!';
 }
+
+let h = hello(); 
+h;
+
 
 // Problem 2
 // Improve your initial function by accepting a parameter
@@ -52,6 +57,9 @@ function greeting(name) {
   // let parting = "Goodbye, " + name + ".";
   // (but of course, I actually want to say hello.)
 }
+let greeting = "hello,Ms.Atwood";
+console.log(greeting); 
+
 
 // Problem 3
 // write a function that takes three parameters and returns an array
@@ -133,12 +141,30 @@ function typeTester (unknown) {
   // return a value. 
 }
 
+if (typeof(unknown) === 'string')
+{
+  return unknown + ' yay!';
+}
+else if (typeof(unknown) === 'number')
+{
+  return unknown * unknown; 
+}
+else if (typeof(unknown) === 'undefined')
+{
+  return 'Sorry, I can\'t do anything with a null value.'; 
+}
+else 
+{
+  return 'don\'t know how how to use that kind of variable.'; 
+}
+
+
 
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
 // MODIFYING THIS CODE WILL ALMOST CERTAINLY CAUSE YOUR TESTS TO BREAK
 // AND YOUR ASSIGNMENT TO FAIL!
-var exports;
+  var exports;
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   exports = module.exports = {};

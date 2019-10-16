@@ -58,7 +58,7 @@ function greeting(name) {
   // (but of course, I actually want to say hello.)
 }
 let greeting = "hello,Ms.Atwood";
-console.log(greeting); 
+console.log(greeting + name); 
 
 
 // Problem 3
@@ -74,7 +74,9 @@ console.log(greeting);
 function returnArray (first, second, third) {
   // you can define the array using "new Array ()" or just "[ , , ]"
   // don't forget to return it
+  return "Wayne, George, HIS393"
 }
+let returnArray = ["Wayne", "George", "HIS393"]; 
 
 
 // Problem 4
@@ -98,6 +100,13 @@ function splitArray (thisArray) {
 
 }
 
+a[]; 
+a.push("Tim");
+a.push("Horton");
+a.push("was");
+a.push("a Donut"); 
+console.log(Tim Horton was a donut)
+
 // Problem 5
 // A. Write a simple function that takes two arguments.  Subtact the second number from the first.
 // Return the result
@@ -109,7 +118,13 @@ function splitArray (thisArray) {
  */
 function subtract(number1, number2) {
   // subtract number2 from number1, and return the result.
+  return "2 - 1"; 
+
 }
+
+numbers = [1,2,3]
+console.log(2-1); 
+
 
 
 //B. Write a slightly more complex number that only performs the subtraction after testing to be

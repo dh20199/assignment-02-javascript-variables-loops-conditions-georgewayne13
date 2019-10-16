@@ -26,7 +26,14 @@ function returnObject (first, last, prof) {
   // o.firstName = first
   // etc.
   // don't forget to return the object
+  
+  return 'Matt, Price, prof'; 
 }
+
+let names= ['Matt', 'Price', 'prof'];
+let i = 0; 
+
+
 
 
 
@@ -64,6 +71,7 @@ function objectToSentence (obj) {
   // also note: you need to change this next line!!
   return 'RETURNVALUE';
 }
+
 
 
 // Problem 3
@@ -251,6 +259,7 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   var exports = module.exports = {};
 }
 else {
+  // eslint-disable-next-line no-redeclare
   var exports = window.skeleton = {};
 }
 

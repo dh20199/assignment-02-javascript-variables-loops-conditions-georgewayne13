@@ -71,6 +71,9 @@ function objectToSentence (obj) {
   // also note: you need to change this next line!!
   return 'RETURNVALUE';
 }
+let firstName= "Wayne", 
+    lastName= "George", 
+    profession= "Student", 
 
 
 

@@ -112,6 +112,7 @@ function wasWriter (obj) {
 }
 
 
+
 // Problem 4
 // Write a function that, when passed a string and an integer as parameters,
 // will repeat the string "integer" times

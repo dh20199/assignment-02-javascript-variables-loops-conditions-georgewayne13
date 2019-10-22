@@ -73,7 +73,7 @@ function objectToSentence (obj) {
 }
 let firstName= "Wayne", 
     lastName= "George", 
-    profession= "Student", 
+    profession= "Student"; 
 
 
 
@@ -103,6 +103,7 @@ let firstName= "Wayne",
  * @param {string} obj.profession - profession of that person
  * @returns {string} a sentence constructed from the object parameters
  */
+
 function wasWriter (obj) {
   // in an if/else statement
   // it is acceptable to put the

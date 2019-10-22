@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 // In this exercise we practice using variables and pasisng them
 // to functions (as parameters) and from functions (as return values)
 
@@ -56,9 +57,11 @@ function greeting(name) {
   // say goodbye, I might write
   // let parting = "Goodbye, " + name + ".";
   // (but of course, I actually want to say hello.)
+  
+  //let greet = Hello, Ms.Atwood;
+  //console.log(greet + name);
 }
-let greeting = "hello,Ms.Atwood";
-console.log(greeting + name); 
+
 
 
 // Problem 3
@@ -74,9 +77,9 @@ console.log(greeting + name);
 function returnArray (first, second, third) {
   // you can define the array using "new Array ()" or just "[ , , ]"
   // don't forget to return it
-  return "Wayne, George, HIS393"
+  return "Wayne, George, HIS393";
 }
-let returnArray = ["Wayne", "George", "HIS393"]; 
+//let returnArray = ["Wayne", "George", "HIS393"]; 
 
 
 // Problem 4
@@ -98,14 +101,15 @@ function splitArray (thisArray) {
   // array[1]
   // etc.
 
+  let a = []; 
+  a.push("Tim");
+  a.push("Horton");
+  a.push("was");
+  a.push("a Donut"); 
+  console.log('Tim Horton was a donut');
+
 }
 
-a[]; 
-a.push("Tim");
-a.push("Horton");
-a.push("was");
-a.push("a Donut"); 
-console.log(Tim Horton was a donut)
 
 // Problem 5
 // A. Write a simple function that takes two arguments.  Subtact the second number from the first.
@@ -122,7 +126,7 @@ function subtract(number1, number2) {
 
 }
 
-numbers = [1,2,3]
+let numbers = [1,2,3];
 console.log(2-1); 
 
 
@@ -153,27 +157,26 @@ function carefulSubtract (first, second) {
  */
 function typeTester (unknown) {
   // use an if/else construction, a switch/case , or any other branching logic. Remember to
-  // return a value. 
-}
+    // return a value. 
 
-if (typeof(unknown) === 'string')
-{
-  return unknown + ' yay!';
-}
-else if (typeof(unknown) === 'number')
-{
-  return unknown * unknown; 
-}
-else if (typeof(unknown) === 'undefined')
-{
-  return 'Sorry, I can\'t do anything with a null value.'; 
-}
-else 
-{
-  return 'don\'t know how how to use that kind of variable.'; 
-}
+  if (typeof(unknown) === 'string')
+  {
+    return unknown + ' yay!';
+  }
+  else if (typeof(unknown) === 'number')
+  {
+    return unknown * unknown; 
+  }
+  else if (typeof(unknown) === 'undefined')
+  {
+    return 'Sorry, I can\'t do anything with a null value.'; 
+  }
+  else 
+  {
+    return 'don\'t know how how to use that kind of variable.'; 
+  }
 
-
+}
 
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY

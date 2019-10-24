@@ -37,9 +37,10 @@ function hello () {
   // with something like "return 'Hello!'"
   return 'Hello!';
 }
-
-let h = hello(); 
+let h = hello();
 h;
+
+
 
 
 // Problem 2
@@ -56,11 +57,11 @@ function greeting(name) {
   // strings.  So for instance, if I wanted to
   // say goodbye, I might write
   // let parting = "Goodbye, " + name + ".";
-  // (but of course, I actually want to say hello.)
-  
-  //let greet = Hello, Ms.Atwood;
-  //console.log(greet + name);
+  // (but of course, I actually want to say hello.
+  return "Hello, "+ name + "!"; 
 }
+let l = greeting("Ms.Atwood");
+l;
 
 
 
@@ -77,10 +78,10 @@ function greeting(name) {
 function returnArray (first, second, third) {
   // you can define the array using "new Array ()" or just "[ , , ]"
   // don't forget to return it
-  return "Wayne, George, HIS393";
+  return [first, second, third];
 }
-//let returnArray = ["Wayne", "George", "HIS393"]; 
-
+let a = returnArray ('hi', 'this', 'sucks');
+a;
 
 // Problem 4
 // write a function that, when passed a single argument (an array of 3 or more elements)
@@ -101,14 +102,12 @@ function splitArray (thisArray) {
   // array[1]
   // etc.
 
-  let a = []; 
-  a.push("Tim");
-  a.push("Horton");
-  a.push("was");
-  a.push("a Donut"); 
-  console.log('Tim Horton was a donut');
+  return thisArray [0] +' '+ thisArray [1] + ' was a ' + thisArray [2] + '.';
 
 }
+
+let s = splitArray(['Italo', 'Calvino', 'novelist']);
+s;
 
 
 // Problem 5
@@ -122,12 +121,12 @@ function splitArray (thisArray) {
  */
 function subtract(number1, number2) {
   // subtract number2 from number1, and return the result.
-  return "2 - 1"; 
+  return number1 - number2;
 
 }
 
-let numbers = [1,2,3];
-console.log(2-1); 
+let n = subtract(2, 1);
+n;
 
 
 
@@ -139,8 +138,15 @@ function carefulSubtract (first, second) {
   // test to be sure that both first and second are numbers.
   // if so, return the result. Otherwise, return the string
   // "I can only subtract numbers."
+  if(Number.isInteger(first)== true && Number.isInteger(second)==true){ return first - second;} 
+  else{ return "I can only subtract numbers.";}
 
 }
+
+let aXE = carefulSubtract(10,4);
+aXE;
+let BXE = carefulSubtract("10",4);
+BXE;
 
 
 
@@ -157,28 +163,28 @@ function carefulSubtract (first, second) {
  */
 function typeTester (unknown) {
   // use an if/else construction, a switch/case , or any other branching logic. Remember to
-    // return a value. 
+// return a value. 
 
-  if (typeof(unknown) === 'string')
+  if (typeof(unknown) == 'string')
   {
     return unknown + ' yay!';
   }
-  else if (typeof(unknown) === 'number')
+  else if (typeof(unknown) == 'number')
   {
     return unknown * unknown; 
   }
-  else if (typeof(unknown) === 'undefined')
+  else if (typeof(unknown) == 'undefined')
   {
-    return 'Sorry, I can\'t do anything with a null value.'; 
+    return 'Sorry, I can\'t do anything with an undefined value.'; 
   }
   else 
   {
-    return 'don\'t know how how to use that kind of variable.'; 
+    return 'I don\'t know how to use that kind of variable.'; 
   }
 
 }
-
-
+let tt = typeTester(8);
+tt;
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
 // MODIFYING THIS CODE WILL ALMOST CERTAINLY CAUSE YOUR TESTS TO BREAK
 // AND YOUR ASSIGNMENT TO FAIL!

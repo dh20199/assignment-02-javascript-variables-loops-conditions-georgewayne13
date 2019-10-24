@@ -26,13 +26,12 @@ function returnObject (first, last, prof) {
   // o.firstName = first
   // etc.
   // don't forget to return the object
-  
-  return 'Matt, Price, prof'; 
+  var o = {};
+  o.firstName = first;
+  o.lastName = last;
+  o.profession = prof;  
+  return o;
 }
-
-let names= ['Matt', 'Price', 'prof'];
-let i = 0; 
-
 
 
 
@@ -69,12 +68,8 @@ function objectToSentence (obj) {
   // obj.propertyname
   // note the quotes in the first options
   // also note: you need to change this next line!!
-  return 'RETURNVALUE';
+  return obj.firstName + ' '+ obj.lastName + ' was a ' + obj.profession + '.';
 }
-let firstName= "Wayne", 
-    lastName= "George", 
-    profession= "Student"; 
-
 
 
 // Problem 3
@@ -110,7 +105,12 @@ function wasWriter (obj) {
   // "return" statement inside the conditional braces
   // so you can, e.g.,
   // if (...) {return A} else {return B}
+  if(obj.profession == 'novelist'){ return obj.firstName + ' ' + obj.lastName + ' was a writer.';} 
+  else{return obj.firstName + ' ' + obj.lastName+' was not a writer.';}
+
 }
+
+
 
 
 
@@ -128,9 +128,12 @@ function wasWriter (obj) {
  * @param {number} aNumber
  * @returns {string}
  */
+var ax = '';
 function stringIterator (aString, aNumber) {
   // remember a basic "for" loop has this structure:
   // for (var i = 0; i< SOMETHING; i++) {...statements...  };
+  for(var i =0;i<aNumber;i++){ax = ax +aString;}
+  return ax;
 }
 
 
@@ -154,9 +157,15 @@ function stringIterator (aString, aNumber) {
  * @param {number} aNumber
  * @returns   {string}
  */
+var a = '';
 function prettyIterator (aString, aNumber) {
   // be sure to check your results on this one; it has a trick. maybe 2. 
+  for(var i = 1;i<=aNumber;i++){a= a +  aString + '(' + i + ')\n';}
+  return a;
+
 }
+
+
 
 
 
@@ -194,7 +203,7 @@ function prettyIterator (aString, aNumber) {
  * @param  {string} pm.fullName
  * @param {string} pm.party
  * @param {number} pm.from
- * @param {number} pm.toparty
+ * @param {number} pm.to
  * @returns {string} 
  */
 function computeReign (pm) {
@@ -204,6 +213,9 @@ function computeReign (pm) {
   // attributes and variables. remember that you may need to
   // "escape" the ' with \'
   // finally, makre sure you return the sentence as the value of the function
+  
+  return pm.fullName+'\''+'s'+' reign was '+ (pm.to-pm.from).toString() +' years long.';
+
 }
 
 
@@ -252,11 +264,15 @@ function computeReign (pm) {
  * @returns {String} a set of sentences, each on its own line, constructed from
  *  the properties of the individual objects comprising `list`
  */
+var la = '';
 function sentences(list) {
   // Hint: "ministers" is an ARRAY of OBJECTS. The simplest way to solve this problem
   // is to use the "for...of" loop syntax to loop through the array,
   // and the object[attribute] or object.attribute reference format to access
   // the internal components of the objects.
+  for(var x of list){la = la+ computeReign(x)+'\n';}
+  return la;
+
 }
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
